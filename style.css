@@ -2,7 +2,6 @@ body {
   background-color: lightblue;
 }
 
-
 #thermostat {
   background-color: white;
   border-top-style: outset;
@@ -11,13 +10,29 @@ body {
   border-left-style: outset;
   border-width: 10px;
   border-color: white;
-  bor
-  display: block;
+  position: absolute;
+  width: 400px;
   margin-top: 200px;
-  margin-left: 400px;
-  margin-right: 1000px;
+  margin-left: 200px;
 }
 
+#current_city_temp {
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-width: 10px;
+  border-color: white;
+}
+
+#power_save {
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-width: 10px;
+  border-color: white;
+}
 
 .low-usage {
   color: green;
