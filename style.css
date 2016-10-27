@@ -1,3 +1,24 @@
+body {
+  background-color: lightblue;
+}
+
+
+#thermostat {
+  background-color: white;
+  border-top-style: outset;
+  border-right-style: outset;
+  border-bottom-style: outset;
+  border-left-style: outset;
+  border-width: 10px;
+  border-color: white;
+  bor
+  display: block;
+  margin-top: 200px;
+  margin-left: 400px;
+  margin-right: 1000px;
+}
+
+
 .low-usage {
   color: green;
 }

@@ -11,16 +11,10 @@
     <title>Thermostat</title>
   </head>
   <body>
-    <p id="weather_today"></p>
-    <h1 id="current_temperature"></h1>
-    <h4>Power save:</h4>
-    <p id="power_save_status"></p>
-    <button type="button" id="temperature_up">Up</button>
-    <button type="button" id="temperature_down">Down</button>
-    <button type="button" id="temperature_reset">Reset</button> <br><br>
-    <button type="button" id="power_save_on">Power save on</button>
-    <button type="button" id="power_save_off">Power save off</button>
-    <h4> Current city </h4>
+    <div id="thermostat">
+    <div id="current_city_temp">
+    <h4 id="weather_today"></h4>
+    <h5> Current city </h5>
     <form id="current_city" >
       <select name="city">
         <option value="London">London</option>
@@ -39,5 +33,18 @@
       </select>
       <input type="submit">
     </form>
-  </body>
+    </div>
+    <div id="thermostat_temperature">
+    <h1> <span id="current_temperature"></span>°C</h1>
+    <button type="button" id="temperature_up">Up</button>
+    <button type="button" id="temperature_down">Down</button>
+    <button type="button" id="temperature_reset">Reset</button> <br><br>
+    </div>
+    <div id="power_save">
+    <h5>Power save: <span id="power_save_status"></span></h5>
+    <button type="button" id="power_save_on">On</button>
+    <button type="button" id="power_save_off">Off</button>
+    </div>
+    </div>
+    </body>
 </html>

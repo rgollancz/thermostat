@@ -54,8 +54,8 @@ Thermostat.prototype.powerSaveTemperatureReset = function () {
 };
 
 Thermostat.prototype.powerSavingStatus = function () {
-  if (this._powerSaving === true) return "On";
-  if (this._powerSaving === false) return "Off";
+  if (this._powerSaving === true) return "ON";
+  if (this._powerSaving === false) return "OFF";
 };
 
 Thermostat.prototype.isPowerSavingOn = function () {
