@@ -1,5 +1,9 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
+  $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=London&APPID=f6e19caa7e9f1aa46c13c1147d24cf9f", function(result) {
+    var message = ("Weather: "+ result.weather[0].main);
+    $('#weather_today').append(message);
+  });
 
   updateTemperature();
 
