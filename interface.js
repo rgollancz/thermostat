@@ -1,12 +1,25 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
-  // includes &units query for celsius and GET request include API key from OPen Weather user 
+  // includes &units query for celsius and GET request include API key from OPen Weather user
   $.get("http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=f6e19caa7e9f1aa46c13c1147d24cf9f", function(data) {
     var message = ("Weather: "+ data.main.temp+"°C");
     $('#weather_today').append(message);
   });
 
   updateTemperature();
+
+  $('#current_city').submit(function(e) {
+    e.preventDefault();
+    var city_q = $(this).serialize();
+    var city = city_q.substr(5,15)
+    // console.log(city);
+    var url = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&APPID=f6e19caa7e9f1aa46c13c1147d24cf9f"
+    // console.log(url)
+    $.get(url, function(data) {
+      var message = ("Weather: "+ data.main.temp+"°C");
+      $('#weather_today').html(message);
+    });
+  });
 
   $('#power_save_status').text(thermostat.powerSavingStatus());
 
