@@ -10,8 +10,8 @@ $(document).ready(function() {
 
   $('#current_city').submit(function(e) {
     e.preventDefault();
-    var city_q = $(this).serialize();
-    var city = city_q.substr(5,15)
+    var city = $(this).serialize();
+    var city = city.substr(5,15)
     // console.log(city);
     var url = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&APPID=f6e19caa7e9f1aa46c13c1147d24cf9f"
     // console.log(url)
