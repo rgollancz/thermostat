@@ -1,7 +1,8 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
-  $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=London&APPID=f6e19caa7e9f1aa46c13c1147d24cf9f", function(result) {
-    var message = ("Weather: "+ result.weather[0].main);
+  // includes &units query for celsius and GET request include API key from OPen Weather user 
+  $.get("http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=f6e19caa7e9f1aa46c13c1147d24cf9f", function(data) {
+    var message = ("Weather: "+ data.main.temp+"°C");
     $('#weather_today').append(message);
   });
 
