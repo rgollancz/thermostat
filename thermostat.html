@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-
+<script src="jquery.js"></script>
+<script src="jasmine/src/Thermostat.js"></script>
+<script src="interface.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <html>
@@ -8,14 +10,10 @@
     <title>Thermostat</title>
   </head>
   <body>
-    <div>
-      <p id="current_temperature">?</p>
-    </div>
+    <h1 id="current_temperature"></h1>
     <button type="button" id="temperature_up">Up</button>
     <button type="button" id="temperature_down">Down</button>
     <button type="button" id="temperature_reset">Reset</button>
     <button type="button" id="power_save">Power save</button>
-
-    <script src="jasmine/src/Thermostat.js"></script>
   </body>
 </html>
