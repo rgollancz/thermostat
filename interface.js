@@ -33,13 +33,7 @@ $(document).ready(function() {
 
   function updateTemperature() {
     $('#current_temperature').text(thermostat.currentTemperature());
-    if (thermostat.energyUsage() === 'low-usage') {
-      $('#current_temperature').css('color', 'green')
-    } else if (thermostat.energyUsage() === 'medium-usage') {
-      $('#current_temperature').css('color', 'black')
-    } else {
-      $('#current_temperature').css('color', 'red')
-    };
+    $('#current_temperature').attr('class', thermostat.energyUsage());
   };
 
 });
