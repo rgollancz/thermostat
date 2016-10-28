@@ -9,3 +9,10 @@ feature 'serve web page' do
     expect(page).to have_content "Current city"
   end
 end
+
+feature 'retrieve a temperature as json' do
+  scenario 'should be able to return a temperature'
+    visit('/temperature')
+    expect(page).to have_content '{"temperature":"0"}'
+end
+end
